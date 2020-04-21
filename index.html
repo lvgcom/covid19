@@ -1,0 +1,251 @@
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link href='https://fonts.googleapis.com/earlyaccess/notosanssinhala.css' rel='stylesheet' type='text/css'/>
+<!-- <link rel="stylesheet" href="css/main.css"> -->
+<style>
+body {font-family:Arial,Helvetica,sans-serif}
+.block-wrapper {
+  border-radius: 10px;
+  padding:3px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0876ab), to(#0782bd));
+  background-image: -webkit-linear-gradient(#0782bd, #0876ab);
+  background-image: -moz-linear-gradient(#0782bd, #0876ab);
+  background-image: -o-linear-gradient(#0782bd, #0876ab);
+  background-image: linear-gradient(#19a5e8, #003e5d);
+  background-repeat: no-repeat;
+}
+.block-wrapper>div {
+  margin:0
+}
+.block-wrapper>.row>div {
+  padding:2px;
+}
+.main-blocks>div {
+  text-align: center;
+  padding:3px;
+}
+.block-head {
+  color: #fff;
+  display: block;
+  font-size:14px;
+  font-weight:700;
+  padding-top:4px;
+  padding-bottom:4px;
+}
+.block-time {
+  color: #926125;
+  display: inline-block;
+  font-size:12px;
+  padding:5px 10px;
+  background-color:#ffdfb8;
+  border-radius:6px;
+}
+.sub-block {
+  padding:5px 6px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #036898;
+  border-radius: 10px;
+}
+.s-icon {
+  font-size:18px;
+  margin-bottom:4px;
+}
+.s-icon .live i {
+  font-size:21px;
+  color:red;
+  padding-right:5px;
+}
+@keyframes live {
+  50% {
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes live {
+  50% {
+    opacity: 0.0;
+  }
+}
+.live {
+  animation: live 2s step-start 0s infinite;
+  -webkit-animation: live 1s step-start 0s infinite;
+}
+.s-title {
+  font-size:13px;
+}
+.s-count {
+  font-size:30px;
+  font-weight: 700;
+}
+.related-blocks .col-3 {
+  padding:3px;
+}
+.block {
+  color:#fff;
+  text-align: center;
+  padding:10px 6px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.block-icon {
+  font-size:20px;
+  margin-bottom:10px;
+}
+.block-title {
+  font-size:12px;
+  height:54px;
+}
+.block-count {
+  font-size:25px;
+  font-weight: 700;
+}
+.first-color {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#10846f), to(#149777));
+  background-image: -webkit-linear-gradient(#149777, #10846f);
+  background-image: -moz-linear-gradient(#149777, #10846f);
+  background-image: -o-linear-gradient(#149777, #10846f);
+  background-image: linear-gradient(#ec7935, #c15e24);
+  background-repeat: no-repeat;
+}
+.first-color .block-icon {
+  /* color:#ec7935; */
+}
+.second-color {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#10846f), to(#149777));
+  background-image: -webkit-linear-gradient(#149777, #10846f);
+  background-image: -moz-linear-gradient(#149777, #10846f);
+  background-image: -o-linear-gradient(#149777, #10846f);
+  background-image: linear-gradient(#ff0d0d, #c52929);
+  background-repeat: no-repeat;
+}
+.second-color .block-icon {
+  /* color:#f30e0e; */
+}
+.third-color {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#10846f), to(#149777));
+  background-image: -webkit-linear-gradient(#149777, #10846f);
+  background-image: -moz-linear-gradient(#149777, #10846f);
+  background-image: -o-linear-gradient(#149777, #10846f);
+  background-image: linear-gradient(#0ea53c, #0a792c);
+  background-repeat: no-repeat;
+}
+.third-color .block-icon {
+  /* color:#0ea53c; */
+}
+.fourth-color {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#10846f), to(#149777));
+  background-image: -webkit-linear-gradient(#149777, #10846f);
+  background-image: -moz-linear-gradient(#149777, #10846f);
+  background-image: -o-linear-gradient(#149777, #10846f);
+  background-image: linear-gradient(#bf341d, #8c2110);
+  background-repeat: no-repeat;
+}
+.fourth-color .block-icon {
+  /* color:#af2a14; */
+}
+@media screen and (min-width: 768px) {
+  body {padding:6px 15px}
+}
+@media screen and (max-width: 768px) {
+  body {padding:5px 15px}
+}
+@media screen and (min-width: 568px) {
+  .mobile {display: none;}
+  .desktop { display: inline-block}
+  .block-head {
+    font-family:  Abhaya Libre,Noto Sans Sinhala,Verdana;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom:8px;
+    text-shadow: 0 1px 0 #08618c;
+  }
+  .sub-block {
+    min-height: 78px;
+  }
+  .s-title {
+    font-family:  Abhaya Libre,Noto Sans Sinhala,Verdana;
+    font-size: 14px;
+  }
+  .block-title {
+    font-family:  Abhaya Libre,Noto Sans Sinhala,Verdana;
+    font-size:14px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="row main-blocks">
+    <div class="col-12">
+      <div class="block-wrapper">
+        <div class="row">
+          <div class="col-6">
+            <span class="block-head">
+          
+            ශ්‍රී ලංකාව තුළ<span class="mobile"><br></span><span class="desktop">&nbsp;</span>කොරෝනා නවතම තත්වය </span>
+           
+           <span class="block-time"><div id="somedate"></div> වන විට</span>
+          </div>
+          
+          <div class="col-6">
+            <div class="sub-color sub-block">
+              <div class="s-title" >කොරෝනා බවට තහවුරු වූ ආසාදිතයින් </div>
+             <div class="s-icon"><span class="live"><i class="fas fa-head-side-cough"></i></span><span class="s-count" id="sometotal">
+             </span>
+              
+             </div>
+             
+            </div>
+             <span class="block-time"><a href="https://lankaviralgossip.com/corona-live-updates-map/"> වැඩි විස්තර මෙතැනින්  </a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row main-blocks">
+    <div class="col-12">
+      <span class="block-head">ශ්‍රී ලංකාව තුළ - කොරෝනා</span>
+      <span class="block-time">මාර්තු 25 14:00 වන විට</span>
+    </div>
+  </div> -->
+  <div class="row related-blocks">
+    <div class="col-3">
+      <div class="first-color block">
+        <div class="block-icon"><i class="fas fa-procedures"></i></div>
+         <div class="block-title">අද දින හමුවූ රෝගීන්</div>
+        <div class="block-count" id="somenew"></div>
+ 
+        </div>
+      </div>
+    <div class="col-3">
+      <div class="second-color block">
+        <div class="block-icon"><i class="fas fa-hospital-user"></i></div>
+        <div class="block-title">රෝහල් තුල සිටින අය</div>
+            <div class="block-count" id="somehos"></div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="third-color block">
+        <div class="block-icon"><i class="fas fa-child"></i></div>
+                 
+        <div class="block-title">සුවය ලබා පිටවූ අය</div>
+         <div class="block-count" id="somerecover"></div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="fourth-color block">
+        <div class="block-icon"><i class="fas fa-user-minus"></i></div>
+        <div class="block-title">මරණ සංඛ්‍යාව</div>
+        <div class="block-count" id="somedeath"></div>
+        </div>
+    </div>
+  </div>
+
+ 
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+</body>
+</html>
