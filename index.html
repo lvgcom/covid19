@@ -6,7 +6,17 @@
 <link href='https://fonts.googleapis.com/earlyaccess/notosanssinhala.css' rel='stylesheet' type='text/css'/>
   
   
-  <script src="https://cdn.jsdelivr.net/gh/lvgcom/covid19@master/statics.js"></script>
+  <script src=""></script>
+  
+  <script>
+  var Webflow = Webflow || [];
+  Webflow.push(function() {
+    $.get('https://cdn.jsdelivr.net/gh/lvgcom/covid19@master/statics.js/master/covid19/index.html', function(data) {
+      $('#ajaxContent').append(data);
+    });
+  });
+  </script>
+  
   
 <!-- <link rel="stylesheet" href="css/main.css"> -->
 <style>
